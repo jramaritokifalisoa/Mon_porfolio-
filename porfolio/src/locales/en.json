@@ -1,0 +1,23 @@
+{
+  "Navigation": {
+    "Acceuil": "Home",
+    "À propos": "About",
+    "Compétences": "Skills",
+    "Projets": "Projects"
+  },
+  "header": {
+    "portraitAlt": "Professional portrait",
+    "dispoStage": "Available for an internship",
+    "posteTitle": "Full-Stack Developer — 2026 Internship",
+    "description": "Passionate about creating high-performance web and mobile applications. I am seeking an internship to deepen my skills and contribute to innovative projects.",
+    "btnProjets": "Discover my GitHub profile",
+    "btnCv": "Download my CV"
+  },
+  "projects": {
+    "sectionTitle": "MY PROJECTS"
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "All the technologies, languages, and testing tools I master to design robust and scalable applications."
+  }
+}

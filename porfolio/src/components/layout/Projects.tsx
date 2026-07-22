@@ -1,5 +1,6 @@
 import Image2 from "../../assets/svg/souris.svg";
 import { Button } from "../ui/buttom";
+import { useTranslation } from "react-i18next";
 const PROJECTS_DATA = [
   {
     id: 1,
@@ -28,6 +29,7 @@ const PROJECTS_DATA = [
 ];
 
 export const Projects = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full px-6 md:px-16 lg:px-32 py-16 bg-white">
       <img
@@ -40,7 +42,7 @@ export const Projects = () => {
 
       <div className="w-full mt-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-950 text-center lg:text-left">
-          MES PROJETS
+          {t("projects.sectionTitle")}
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

@@ -1,12 +1,29 @@
 import { useState } from "react";
-import { Button } from "../ui/buttom";
+import { Button } from "../ui/buttom"; // Vérifie si ce n'est pas "../ui/button" sans le 'm'
 import { Name } from "../ui/name";
+import { useTranslation } from "react-i18next";
+
+const LANGUAGES = [
+  { code: "FR", label: "Français", flag: "🇫🇷" },
+  { code: "EN", label: "English", flag: "🇬🇧" },
+];
 
 export const Navigation = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+
+  // Synchronisation avec l'état i18n en lettres majuscules
+  const currentLang =
+    LANGUAGES.find((l) => l.code === i18n.language.toUpperCase()) ||
+    LANGUAGES[0];
+
+  const handleLangChange = (langCode: string) => {
+    i18n.changeLanguage(langCode.toLowerCase());
+    setIsLangOpen(false);
+  };
 
   return (
-    // 'w-full' combiné avec l'absence de max-width permet d'occuper tout l'écran
     <nav className="fixed top-0 left-0 w-full p-4 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 font-medium text-sm text-gray-700">
       <div className="w-full px-6 md:px-22 h-16 flex items-center justify-between">
         <div className="flex flex-col justify-center">
@@ -18,23 +35,74 @@ export const Navigation = () => {
           </span>
         </div>
 
-        {/* LIENS DE NAVIGATION - DESKTOP (À l'extrême droite) */}
+        {/* LIENS DE NAVIGATION & OPTIONS - DESKTOP */}
         <div className="hidden md:flex items-center space-x-8 text-xl">
-          <a href="/Acceuil" className="hover:text-blue-600 transition-colors">
-            Accueil
+          {/* Correction : Ajout de la fonction t() sur tous les liens avec des clés en minuscules */}
+          <a href="/" className="hover:text-blue-600 transition-colors">
+            {t("Navigation.Acceuil")}
           </a>
           <a href="/about" className="hover:text-blue-600 transition-colors">
-            À propos
+            {t("Navigation.À propos")}
           </a>
           <a href="/skills" className="hover:text-blue-600 transition-colors">
-            Compétences
+            {t("Navigation.Compétences")}
           </a>
           <a href="/projects" className="hover:text-blue-600 transition-colors">
-            Projets
+            {t("Navigation.Projets")}
           </a>
 
+          {/* BOUTON LANGUE ANIMÉ - DESKTOP */}
+          <div className="relative">
+            <button
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm hover:border-blue-400 hover:text-blue-600 transition-all active:scale-95 text-base"
+            >
+              <span>{currentLang.flag}</span>
+              <span className="font-semibold text-sm">{currentLang.code}</span>
+              <svg
+                className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${isLangOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            {/* LISTE DÉROULANTE ANIMÉE */}
+            {isLangOpen && (
+              <>
+                <div
+                  className="fixed inset-0 z-10"
+                  onClick={() => setIsLangOpen(false)}
+                />
+                <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-100 rounded-2xl shadow-xl z-20 overflow-hidden animate-in fade-in zoom-in-95 duration-200 origin-top-right p-1">
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLangChange(lang.code)} // Correction : lang.code au lieu de lang
+                      className={`w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-xl transition-colors text-left ${
+                        currentLang.code === lang.code
+                          ? "bg-blue-50 text-blue-600"
+                          : "text-gray-700 hover:bg-gray-50"
+                      }`}
+                    >
+                      <span className="text-base">{lang.flag}</span>
+                      <span>{lang.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+
           <Button variant="default" className="shadow-sm">
-            Me contacter
+            Contact
           </Button>
         </div>
 
@@ -71,36 +139,39 @@ export const Navigation = () => {
         </div>
       </div>
 
-      {/* MENU DÉROULANT - MOBILE (Prend aussi tout l'écran) */}
+      {/* MENU DÉROULANT - MOBILE */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 px-6 pt-2 pb-4 space-y-3 shadow-lg">
+        <div className="md:hidden bg-white border-b border-gray-100 px-6 pt-2 pb-6 space-y-4 shadow-lg flex flex-col">
+          {/* Correction : Traduction également appliquée sur la partie Mobile */}
           <a
             href="/"
-            className="block py-2 hover:text-blue-600 transition-colors"
+            className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            Accueil
+            {t("accueil")}
           </a>
           <a
             href="/about"
-            className="block py-2 hover:text-blue-600 transition-colors"
+            className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            À propos
+            {t("about")}
           </a>
           <a
             href="/skills"
-            className="block py-2 hover:text-blue-600 transition-colors"
+            className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            Compétences
+            {t("skills")}
           </a>
           <a
             href="/projects"
-            className="block py-2 hover:text-blue-600 transition-colors"
+            className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            Projets
+            {t("projects")}
           </a>
+
+          <div className="w-full h-[1px] bg-gray-100 my-2" />
           <div className="pt-2">
-            <Button variant="default" className="w-full text-xl">
-              Me contacter
+            <Button variant="default" className="w-full text-xl py-6">
+              Contact
             </Button>
           </div>
         </div>
