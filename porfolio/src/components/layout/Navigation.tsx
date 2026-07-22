@@ -38,16 +38,16 @@ export const Navigation = () => {
         {/* LIENS DE NAVIGATION & OPTIONS - DESKTOP */}
         <div className="hidden md:flex items-center space-x-8 text-xl">
           {/* Correction : Ajout de la fonction t() sur tous les liens avec des clés en minuscules */}
-          <a href="/" className="hover:text-blue-600 transition-colors">
+          <a href="#" className="hover:text-blue-600 transition-colors">
             {t("Navigation.Acceuil")}
           </a>
-          <a href="/about" className="hover:text-blue-600 transition-colors">
+          <a href="#" className="hover:text-blue-600 transition-colors">
             {t("Navigation.À propos")}
           </a>
-          <a href="/skills" className="hover:text-blue-600 transition-colors">
+          <a href="#" className="hover:text-blue-600 transition-colors">
             {t("Navigation.Compétences")}
           </a>
-          <a href="/projects" className="hover:text-blue-600 transition-colors">
+          <a href="#" className="hover:text-blue-600 transition-colors">
             {t("Navigation.Projets")}
           </a>
 
@@ -144,25 +144,25 @@ export const Navigation = () => {
         <div className="md:hidden bg-white border-b border-gray-100 px-6 pt-2 pb-6 space-y-4 shadow-lg flex flex-col">
           {/* Correction : Traduction également appliquée sur la partie Mobile */}
           <a
-            href="/"
+            href="#"
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
             {t("accueil")}
           </a>
           <a
-            href="/about"
+            href="#"
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
             {t("about")}
           </a>
           <a
-            href="/skills"
+            href="#"
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
             {t("skills")}
           </a>
           <a
-            href="/projects"
+            href="#"
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
             {t("projects")}
