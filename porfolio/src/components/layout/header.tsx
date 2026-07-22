@@ -4,7 +4,7 @@ import { Button } from "../ui/buttom";
 
 export const Header = () => {
   return (
-    <section className="relative min-h-[90vh] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex flex-col justify-center items-center bg-white px-6 md:px-16 lg:px-32 overflow-hidden">
+    <div className="relative min-h-[90vh] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex flex-col justify-center items-center bg-white px-6 md:px-16 lg:px-32 overflow-hidden">
       {/* 1. Éléments de Design en Arrière-plan */}
       <div className="absolute top-[-5%] left-[-5%] w-[600px] h-[600px] rounded-full bg-blue-50/50 blur-3xl pointer-events-none" />
       <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] rounded-full bg-teal-50/40 blur-3xl pointer-events-none" />
@@ -26,9 +26,9 @@ export const Header = () => {
         </div>
 
         {/* BLOC TEXTE - Écrit en premier (Reste en haut sur mobile, se place à droite sur PC via col-start) */}
-        <div className="lg:col-span-6 lg:col-start-6 flex flex-col text-center lg:text-left items-center lg:items-start space-y-6 lg:ml-auto lg:max-w-[620px]">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+        <div className="lg:col-span-6 lg:col-start-6 flex flex-col text-center lg:text-left items-center lg:items-start space-y-7 lg:ml-auto lg:max-w-[620px]">
+          <span className="inline-flex items-center gap-2 px-5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100 uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             Disponible pour un stage
           </span>
 
@@ -42,8 +42,8 @@ export const Header = () => {
 
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
             Passionné par la création d'applications web et mobiles
-            performantes. Je combine rigueur technique et sensibilité UX pour
-            transformer vos idées en solutions concrètes et scalables.
+            performantes. Je suis à la recherche d'un stage pour approfondir mes
+            compétences et contribuer à des projets innovants.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
@@ -53,15 +53,21 @@ export const Header = () => {
             >
               Découvrir mes projets
             </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto px-8 py-6 border-gray-200 hover:bg-gray-50 text-gray-700"
+            <a
+              href="/cv-developpeur.pdf"
+              download="CV_TonNom_Dev.pdf"
+              className="w-full sm:w-auto"
             >
-              Télécharger mon CV
-            </Button>
+              <Button
+                variant="outline"
+                className="w-full px-8 py-6 border-gray-200 hover:bg-gray-50 text-gray-700"
+              >
+                Télécharger mon CV
+              </Button>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

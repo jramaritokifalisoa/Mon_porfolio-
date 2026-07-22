@@ -8,21 +8,19 @@ export const Navigation = () => {
   return (
     // 'w-full' combiné avec l'absence de max-width permet d'occuper tout l'écran
     <nav className="fixed top-0 left-0 w-full p-4 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 font-medium text-sm text-gray-700">
-      {/* Remplacement de max-w-6xl mx-auto par des paddings horizontaux fluides */}
       <div className="w-full px-6 md:px-22 h-16 flex items-center justify-between">
-        {/* LOGO / NOM (À l'extrême gauche) */}
         <div className="flex flex-col justify-center">
           <div className="font-bold text-gray-950 text-base tracking-tight">
             <Name />
           </div>
-          <span className="text-xl text-blue-600 font-semibold tracking-wider uppercase hidden sm:block">
+          <span className="text-xl text-blue-600 font-bold tracking-wider uppercase hidden sm:block">
             Full-Stack Developer
           </span>
         </div>
 
         {/* LIENS DE NAVIGATION - DESKTOP (À l'extrême droite) */}
         <div className="hidden md:flex items-center space-x-8 text-xl">
-          <a href="/" className="hover:text-blue-600 transition-colors">
+          <a href="/Acceuil" className="hover:text-blue-600 transition-colors">
             Accueil
           </a>
           <a href="/about" className="hover:text-blue-600 transition-colors">
