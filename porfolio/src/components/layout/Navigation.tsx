@@ -4,8 +4,8 @@ import { Name } from "../ui/name";
 import { useTranslation } from "react-i18next";
 
 const LANGUAGES = [
-  { code: "FR", label: "Français", flag: "🇫🇷" },
-  { code: "EN", label: "English", flag: "🇬🇧" },
+  { code: "FR", label: "Français" },
+  { code: "EN", label: "English" },
 ];
 
 export const Navigation = () => {
@@ -57,7 +57,6 @@ export const Navigation = () => {
               onClick={() => setIsLangOpen(!isLangOpen)}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm hover:border-blue-400 hover:text-blue-600 transition-all active:scale-95 text-base"
             >
-              <span>{currentLang.flag}</span>
               <span className="font-semibold text-sm">{currentLang.code}</span>
               <svg
                 className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${isLangOpen ? "rotate-180" : ""}`}
@@ -92,7 +91,6 @@ export const Navigation = () => {
                           : "text-gray-700 hover:bg-gray-50"
                       }`}
                     >
-                      <span className="text-base">{lang.flag}</span>
                       <span>{lang.label}</span>
                     </button>
                   ))}
