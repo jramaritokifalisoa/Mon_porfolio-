@@ -6,14 +6,14 @@ export const HomePages = () => {
   return (
     <div className="h-screen w-screen ">
       <Navigation />
-      <section id="Accueil" className="pt-16">
+      <section id="#" className="pt-16">
         <Header />
       </section>
 
-      <section id="projects" className="scroll-mt-24">
+      <section id="#" className="scroll-mt-24">
         <Projects />
       </section>
-      <section id="skills" className="scroll-mt-24">
+      <section id="#" className="scroll-mt-24">
         <Competence />
       </section>
     </div>
