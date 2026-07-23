@@ -62,8 +62,8 @@ export const Header = () => {
               </Button>
             </a>
             <a
-              href="/cv-developpeur.pdf"
-              download="CV_TonNom_Dev.pdf"
+              href="../public/cv-developpeur.pdf"
+              download="cv-developpeur.pdf"
               className="w-full sm:w-auto"
             >
               <Button
