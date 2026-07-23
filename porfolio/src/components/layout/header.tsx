@@ -2,7 +2,6 @@ import Image from "../../assets/images/moi.jpeg";
 import { Name } from "../ui/name";
 import { Button } from "../ui/buttom";
 import { useTranslation } from "react-i18next";
-
 export const Header = () => {
   const { t } = useTranslation();
 

@@ -1,40 +1,37 @@
 import Image2 from "../../assets/svg/souris.svg";
 import { Button } from "../ui/buttom";
 import { useTranslation } from "react-i18next";
+
+// On ne garde ici que la structure et ce qui ne change pas (tags, liens, clés i18n)
 const PROJECTS_DATA = [
   {
     id: 1,
-    title: "E-Commerce Plateforme",
-    description:
-      "Une application web full-stack avec gestion des paiements et un tableau de bord administrateur complet.",
-    tags: ["React", "Node.js", "Tailwind", "PostgreSQL"],
-    link: "https://example.com/APP",
+    keyName: "planify", // Utilisé pour pointer sur projects.data.planify
+    tags: ["HTML/CSS", "Node.js", "Mysql"],
+    link: "https://github.com/jramaritokifalisoa/L2_P.git",
   },
   {
     id: 2,
-    title: "Application Mobile Fitness",
-    description:
-      "Suivi des entraînements en temps réel avec graphiques de progression et rappels personnalisés.",
-    tags: ["React Native", "Firebase", "PostgreSQL"],
-    link: "https://example.com/APP",
+    keyName: "travel", // Utilisé pour pointer sur projects.data.travel
+    tags: ["React-Native Expo", "Reactjs"],
+    link: "https://github.com/jramaritokifalisoa/Miketrika_projet.git",
   },
   {
     id: 3,
-    title: "Dashboard de Données SAAS",
-    description:
-      "Interface d'analyse de données complexes avec filtres avancés et mode sombre natif.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    link: "https://example.com/APP",
+    keyName: "api", // Utilisé pour pointer sur projects.data.api
+    tags: ["Nodejs", "PostgreSQL", "Swagger"],
+    link: "https://github.com/jramaritokifalisoa/Apprentissage.git",
   },
 ];
 
 export const Projects = () => {
   const { t } = useTranslation();
+
   return (
     <div className="w-full px-6 md:px-16 lg:px-32 py-16 bg-white">
       <img
         src={Image2}
-        alt="Défiler vers le bas"
+        alt={t("projects.scrollDownAlt")}
         className="w-9 h-9 animate-bounce mx-auto mb-4"
       />
 
@@ -53,17 +50,17 @@ export const Projects = () => {
             >
               <div className="h-48 w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-b border-gray-100 group-hover:from-blue-50/50 group-hover:to-teal-50/50 transition-colors">
                 <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider group-hover:text-blue-500 transition-colors">
-                  Aperçu du Projet
+                  {t("projects.projectPreview")}
                 </span>
               </div>
 
               <div className="p-6 flex flex-col flex-grow space-y-3">
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  {project.title}
+                  {t(`projects.data.${project.keyName}.title`)}
                 </h3>
 
                 <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
-                  {project.description}
+                  {t(`projects.data.${project.keyName}.description`)}
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-2 mt-auto">
@@ -82,7 +79,7 @@ export const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button>{t("projects.Visiter")}</Button>
+                  <Button>{t("projects.visit")}</Button>
                 </a>
               </div>
             </div>

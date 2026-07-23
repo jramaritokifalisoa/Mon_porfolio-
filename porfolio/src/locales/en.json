@@ -14,8 +14,24 @@
     "btnCv": "Download my CV"
   },
   "projects": {
-    "sectionTitle": "MY PROJECTS",
-    "Visiter": "Visit the project"
+    "sectionTitle": "My Projects",
+    "scrollDownAlt": "Scroll down",
+    "projectPreview": "Project Preview",
+    "visit": "Visit my Project",
+    "data": {
+      "planify": {
+        "title": "Planify",
+        "description": "A platform that combines all the new ways to book and manage your services with complete peace of mind."
+      },
+      "travel": {
+        "title": "Travel Booking Platform",
+        "description": "Creation of a showcase application and a reservation management system for a transport cooperative."
+      },
+      "api": {
+        "title": "REST CRUD API Development",
+        "description": "Design of a complete REST API with Node.js, Express, and PostgreSQL, fully documented from end to end with Swagger."
+      }
+    }
   },
   "footer": {
     "copyright": "All rights reserved."

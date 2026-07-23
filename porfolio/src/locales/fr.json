@@ -14,8 +14,24 @@
     "btnCv": "Télécharger mon CV"
   },
   "projects": {
-    "sectionTitle": "MES PROJETS",
-    "Visiter": "Visiter le projet"
+    "sectionTitle": "Mes Projets",
+    "scrollDownAlt": "Défiler vers le bas",
+    "projectPreview": "Aperçu du Projet",
+    "visit": "Visiter mon projet",
+    "data": {
+      "planify": {
+        "title": "Planify",
+        "description": "Une plateforme qui combine toutes les nouvelles façons de réserver et de gérer vos services en toute tranquillité."
+      },
+      "travel": {
+        "title": "Plateforme de Réservation de voyages",
+        "description": "Création d'une application vitrine et d'un système de gestion de réservations pour une coopérative de transport."
+      },
+      "api": {
+        "title": "Développement d'une API REST CRUD",
+        "description": "Conception d'une API REST complète avec Node.js, Express et PostgreSQL, documentée de bout en bout avec Swagger."
+      }
+    }
   },
   "skills": {
     "title": "Mes Compétences",

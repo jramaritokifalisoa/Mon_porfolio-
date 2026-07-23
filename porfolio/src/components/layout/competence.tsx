@@ -14,7 +14,7 @@ const SKILLS_CATEGORIES = [
         name: "TypeScript",
         color: "border-blue-200 bg-blue-50/30 text-blue-700",
       },
-      { name: "React", color: "border-sky-200 bg-sky-50/30 text-sky-700" },
+      { name: "Reactjs", color: "border-sky-200 bg-sky-50/30 text-sky-700" },
       {
         name: "Tailwind CSS",
         color: "border-teal-200 bg-teal-50/30 text-teal-700",
@@ -26,7 +26,7 @@ const SKILLS_CATEGORIES = [
     icon: <Server className="w-6 h-6 text-emerald-600" />,
     skills: [
       {
-        name: "Node.js",
+        name: "Nodejs",
         color: "border-emerald-200 bg-emerald-50/30 text-emerald-700",
       },
       {
@@ -64,7 +64,15 @@ const SKILLS_CATEGORIES = [
         color: "border-neutral-300 bg-neutral-50/40 text-neutral-800",
       },
       {
+        name: "Bash",
+        color: "border-neutral-300 bg-neutral-50/40 text-neutral-800",
+      },
+      {
         name: "Postman",
+        color: "border-orange-300 bg-orange-50/20 text-orange-700",
+      },
+      {
+        name: "Vercel",
         color: "border-orange-300 bg-orange-50/20 text-orange-700",
       },
       { name: "Swagger", color: "border-lime-300 bg-lime-50/20 text-lime-700" },
