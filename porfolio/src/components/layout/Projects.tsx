@@ -41,7 +41,7 @@ export const Projects = () => {
       <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent my-8"></div>
 
       <div className="w-full mt-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-950 text-center lg:text-left">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-950 text-center lg:text-left">
           {t("projects.sectionTitle")}
         </h1>
 

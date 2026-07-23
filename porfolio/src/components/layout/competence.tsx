@@ -82,7 +82,7 @@ export const Competence = () => {
       <div className="w-full ml-6 mx-auto flex-grow flex flex-col justify-center">
         {/* En-tête de section */}
         <div className="text-center lg:text-left mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-gray-950 uppercase">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-gray-950 uppercase">
             {t("skills.title")}
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl text-lg sm:text-xl leading-relaxed">
