@@ -37,16 +37,19 @@ export const Navigation = () => {
         {/* LIENS DE NAVIGATION & OPTIONS - DESKTOP */}
         <div className="hidden md:flex items-center space-x-8 text-xl">
           {/* Correction : Ajout de la fonction t() sur tous les liens avec des clés en minuscules */}
-          <a href="#" className="hover:text-blue-600 transition-colors">
+          <a href="#Header" className="hover:text-blue-600 transition-colors">
             {t("Navigation.Acceuil")}
           </a>
-          <a href="#" className="hover:text-blue-600 transition-colors">
+          <a href="#Parcours" className="hover:text-blue-600 transition-colors">
             {t("Navigation.À propos")}
           </a>
-          <a href="#" className="hover:text-blue-600 transition-colors">
+          <a
+            href="#Competence"
+            className="hover:text-blue-600 transition-colors"
+          >
             {t("Navigation.Compétences")}
           </a>
-          <a href="#" className="hover:text-blue-600 transition-colors">
+          <a href="#Projects" className="hover:text-blue-600 transition-colors">
             {t("Navigation.Projets")}
           </a>
 
@@ -137,31 +140,33 @@ export const Navigation = () => {
         <div className="md:hidden bg-white border-b border-gray-100 px-6 pt-2 pb-6 space-y-4 shadow-lg flex flex-col">
           {/* Correction : Traduction également appliquée sur la partie Mobile */}
           <a
-            href="#"
+            href="#Header"
+            onClick={() => setIsOpen(false)}
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            {t("accueil")}
+            {t("Navigation.Acceuil")}
           </a>
           <a
-            href="#"
+            href="#Parcours"
+            onClick={() => setIsOpen(false)}
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            {t("about")}
+            {t("Navigation.À propos")}
           </a>
           <a
-            href="#"
+            href="#Competence"
+            onClick={() => setIsOpen(false)}
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            {t("skills")}
+            {t("Navigation.Compétences")}
           </a>
           <a
-            href="#"
+            href="#Projects"
+            onClick={() => setIsOpen(false)}
             className="block py-1 hover:text-blue-600 transition-colors text-xl"
           >
-            {t("projects")}
+            {t("Navigation.Projets")}
           </a>
-
-          <div className="w-full h-[1px] bg-gray-100 my-2" />
         </div>
       )}
     </nav>

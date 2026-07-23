@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Header } from "../../components/layout/header";
 import { Projects } from "../../components/layout/Projects";
 import { Navigation } from "../../components/layout/Navigation";
@@ -7,25 +8,64 @@ import { Footer } from "@/components/layout/footer";
 
 export const HomePages = () => {
   return (
-    <div className="h-screen w-screen ">
+    <div className="min-h-screen w-full bg-white">
       <Navigation />
-      <section id="#" className="pt-16">
+
+      {/* Le Header s'anime dès le chargement de la page */}
+      <motion.section
+        id="Header"
+        className="pt-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+      >
         <Header />
-      </section>
+      </motion.section>
 
-      <section id="#" className="scroll-mt-24">
+      {/* Les sections suivantes s'animent simplement au défilement (scroll) */}
+      <motion.section
+        id="Projects"
+        className="scroll-mt-24"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.4 }}
+      >
         <Projects />
-      </section>
+      </motion.section>
 
-      <section id="#" className="scroll-mt-24">
+      <motion.section
+        id="Competence"
+        className="scroll-mt-24"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.4 }}
+      >
         <Competence />
-      </section>
-      <section id="#" className="scroll-mt-24">
+      </motion.section>
+
+      <motion.section
+        id="Parcours"
+        className="scroll-mt-24"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.4 }}
+      >
         <Parcours />
-      </section>
-      <section id="#" className="scroll-mt-24">
+      </motion.section>
+
+      <motion.section
+        id="Footer"
+        className="scroll-mt-24"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.4 }}
+      >
         <Footer />
-      </section>
+      </motion.section>
     </div>
   );
 };

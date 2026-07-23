@@ -27,14 +27,14 @@ export const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full px-6 md:px-16 lg:px-32 py-16 bg-white">
+    <div className="w-full px-6 md:px-16 lg:px-32 bg-white">
       <img
         src={Image2}
         alt={t("projects.scrollDownAlt")}
         className="w-9 h-9 animate-bounce mx-auto mb-4"
       />
 
-      <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent my-8"></div>
+      <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
 
       <div className="w-full mt-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-950 text-center lg:text-left">
