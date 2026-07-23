@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../ui/buttom"; // Vérifie si ce n'est pas "../ui/button" sans le 'm'
+import { Button } from "../ui/buttom";
 import { Name } from "../ui/name";
 import { useTranslation } from "react-i18next";
 

@@ -1,6 +1,7 @@
 import { Header } from "../../components/layout/header";
 import { Projects } from "../../components/layout/Projects";
 import { Navigation } from "../../components/layout/Navigation";
+import { Parcours } from "../../components/layout/parcours";
 import { Competence } from "../../components/layout/competence";
 export const HomePages = () => {
   return (
@@ -15,6 +16,9 @@ export const HomePages = () => {
       </section>
       <section id="#" className="scroll-mt-24">
         <Competence />
+      </section>
+      <section id="#" className="scroll-mt-24">
+        <Parcours />
       </section>
     </div>
   );

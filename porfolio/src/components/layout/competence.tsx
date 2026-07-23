@@ -11,10 +11,6 @@ const SKILLS_CATEGORIES = [
         color: "border-orange-200 bg-orange-50/30 text-orange-700",
       },
       {
-        name: "JavaScript (ES6+)",
-        color: "border-yellow-200 bg-yellow-50/30 text-yellow-700",
-      },
-      {
         name: "TypeScript",
         color: "border-blue-200 bg-blue-50/30 text-blue-700",
       },
@@ -99,7 +95,7 @@ export const Competence = () => {
           {SKILLS_CATEGORIES.map((category) => (
             <div
               key={category.id}
-              className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Haut de la carte */}

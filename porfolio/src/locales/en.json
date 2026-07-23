@@ -19,5 +19,26 @@
   "skills": {
     "title": "My Skills",
     "subtitle": "All the technologies, languages, and testing tools I master to design robust and scalable applications."
+  },
+  "parcours": {
+    "title": "My Journey",
+    "subtitle": "My academic background and certifications in the software development field.",
+    "status": {
+      "current": "In Progress",
+      "certified": "Certified",
+      "obtained": "Obtained"
+    },
+    "licence": {
+      "title": "Bachelor's Degree Cursus",
+      "desc": "Current university studies focused on computer science, software engineering, and information system architectures."
+    },
+    "udemy": {
+      "title": "Udemy Certificate - REST API",
+      "desc": "Successfully completed specialized training in building robust and secure REST APIs using Node.js, including database management and back-end architectures."
+    },
+    "bac": {
+      "title": "Baccalauréat",
+      "desc": "High School Diploma (Baccalauréat) obtained at Lycée Jacques Rabemananjara in Tamatave, marking the start of my scientific and technical career."
+    }
   }
 }
