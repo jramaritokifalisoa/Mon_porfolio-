@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../ui/buttom";
 import { Name } from "../ui/name";
 import { useTranslation } from "react-i18next";
 
@@ -98,10 +97,6 @@ export const Navigation = () => {
               </>
             )}
           </div>
-
-          <Button variant="default" className="shadow-sm">
-            Contact
-          </Button>
         </div>
 
         {/* BOUTON MENU BURGER - MOBILE */}
@@ -167,11 +162,6 @@ export const Navigation = () => {
           </a>
 
           <div className="w-full h-[1px] bg-gray-100 my-2" />
-          <div className="pt-2">
-            <Button variant="default" className="w-full text-xl py-6">
-              Contact
-            </Button>
-          </div>
         </div>
       )}
     </nav>

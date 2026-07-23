@@ -14,11 +14,15 @@
     "btnCv": "Télécharger mon CV"
   },
   "projects": {
-    "sectionTitle": "MES PROJETS"
+    "sectionTitle": "MES PROJETS",
+    "Visiter": "Visiter le projet"
   },
   "skills": {
     "title": "Mes Compétences",
     "subtitle": "L'ensemble des technologies, langages et outils de test que je maîtrise pour concevoir des applications robustes et scalables.",
     "tools": "Outils"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés."
   }
 }

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Code2, Server, Smartphone, Wrench } from "lucide-react";
-
+import { Heart, Users, Compass } from "lucide-react";
 const SKILLS_CATEGORIES = [
   {
     id: "frontend",
@@ -125,6 +125,64 @@ export const Competence = () => {
               <div className="w-full h-[3px] bg-gradient-to-r from-gray-100 via-blue-500/20 to-gray-100 rounded-full mt-8" />
             </div>
           ))}
+        </div>
+      </div>
+      <div className="w-full mt-20 mx-auto flex-grow flex flex-col justify-center">
+        {/* Grille des valeurs */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Pilier 1 : Sérieux & Investi */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="p-3.5 bg-rose-50 text-rose-600 rounded-2xl w-fit mb-6">
+                <Heart className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-950 mb-3">
+                {t("motivation.cards.commitment.title", "Sérieux & Investi")}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t(
+                  "motivation.cards.commitment.desc",
+                  "Quand je me lance dans un projet, je m'y consacre pleinement. Rigoureux et motivé, je mets un point d'honneur à livrer un travail propre et à respecter mes engagements.",
+                )}
+              </p>
+            </div>
+          </div>
+
+          {/* Pilier 2 : Travail en équipe */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="p-3.5 bg-blue-50 text-blue-600 rounded-2xl w-fit mb-6">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-950 mb-3">
+                {t("motivation.cards.teamwork.title", "Esprit d'équipe")}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t(
+                  "motivation.cards.teamwork.desc",
+                  "Le développement ne se fait pas seul. J'aime partager, échanger des idées et collaborer pour avancer ensemble. Je sais écouter et m'adapter pour la réussite collective.",
+                )}
+              </p>
+            </div>
+          </div>
+
+          {/* Pilier 3 : Soif d'apprendre */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="p-3.5 bg-amber-50 text-amber-600 rounded-2xl w-fit mb-6">
+                <Compass className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-950 mb-3">
+                {t("motivation.cards.learning.title", "Toujours apprendre")}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t(
+                  "motivation.cards.learning.desc",
+                  "La tech évolue vite, et c'est ce qui me passionne. Curieux de nature, je cherche constamment à découvrir de nouvelles technologies, à relever des défis et à parfaire mes compétences.",
+                )}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

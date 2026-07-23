@@ -82,7 +82,7 @@ export const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button>Visiter le projet</Button>
+                  <Button>{t("projects.Visiter")}</Button>
                 </a>
               </div>
             </div>

@@ -3,6 +3,8 @@ import { Projects } from "../../components/layout/Projects";
 import { Navigation } from "../../components/layout/Navigation";
 import { Parcours } from "../../components/layout/parcours";
 import { Competence } from "../../components/layout/competence";
+import { Footer } from "@/components/layout/footer";
+
 export const HomePages = () => {
   return (
     <div className="h-screen w-screen ">
@@ -14,11 +16,15 @@ export const HomePages = () => {
       <section id="#" className="scroll-mt-24">
         <Projects />
       </section>
+
       <section id="#" className="scroll-mt-24">
         <Competence />
       </section>
       <section id="#" className="scroll-mt-24">
         <Parcours />
+      </section>
+      <section id="#" className="scroll-mt-24">
+        <Footer />
       </section>
     </div>
   );

@@ -14,7 +14,29 @@
     "btnCv": "Download my CV"
   },
   "projects": {
-    "sectionTitle": "MY PROJECTS"
+    "sectionTitle": "MY PROJECTS",
+    "Visiter": "Visit the project"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "motivation": {
+    "title": "My Motivations",
+    "subtitle": "Beyond lines of code, here is the mindset and values I bring to every project.",
+    "cards": {
+      "commitment": {
+        "title": "Serious & Committed",
+        "desc": "When I take on a project, I fully commit to it. Rigorous and highly motivated, I make it a priority to deliver clean work and honor my commitments."
+      },
+      "teamwork": {
+        "title": "Team Player",
+        "desc": "Development doesn't happen in isolation. I enjoy sharing, exchanging ideas, and collaborating to move forward together. I know how to listen and adapt for collective success."
+      },
+      "learning": {
+        "title": "Always Learning",
+        "desc": "Tech evolves rapidly, and that's exactly what drives me. Naturally curious, I am constantly eager to learn new things, take on challenges, and sharpen my skills."
+      }
+    }
   },
   "skills": {
     "title": "My Skills",
