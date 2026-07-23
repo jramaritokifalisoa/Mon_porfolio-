@@ -2,23 +2,22 @@ import Image2 from "../../assets/svg/souris.svg";
 import { Button } from "../ui/buttom";
 import { useTranslation } from "react-i18next";
 
-// On ne garde ici que la structure et ce qui ne change pas (tags, liens, clés i18n)
 const PROJECTS_DATA = [
   {
     id: 1,
-    keyName: "planify", // Utilisé pour pointer sur projects.data.planify
+    keyName: "planify",
     tags: ["HTML/CSS", "Node.js", "Mysql"],
     link: "https://github.com/jramaritokifalisoa/L2_P.git",
   },
   {
     id: 2,
-    keyName: "travel", // Utilisé pour pointer sur projects.data.travel
+    keyName: "travel",
     tags: ["React-Native Expo", "Reactjs"],
     link: "https://github.com/jramaritokifalisoa/Miketrika_projet.git",
   },
   {
     id: 3,
-    keyName: "api", // Utilisé pour pointer sur projects.data.api
+    keyName: "api",
     tags: ["Nodejs", "PostgreSQL", "Swagger"],
     link: "https://github.com/jramaritokifalisoa/Apprentissage.git",
   },
@@ -46,7 +45,7 @@ export const Projects = () => {
           {PROJECTS_DATA.map((project) => (
             <div
               key={project.id}
-              className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm transition-all duration-300"
             >
               <div className="h-48 w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-b border-gray-100 group-hover:from-blue-50/50 group-hover:to-teal-50/50 transition-colors">
                 <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider group-hover:text-blue-500 transition-colors">
