@@ -135,7 +135,7 @@ export const Competence = () => {
           ))}
         </div>
       </div>
-      <div className="w-full mt-20 mx-auto flex-grow flex flex-col justify-center">
+      <div className="w-full mt-20 mx-auto flex-grow flex flex-col justify-center ml-6">
         {/* Grille des valeurs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Pilier 1 : Sérieux & Investi */}
