@@ -6,19 +6,19 @@ const PROJECTS_DATA = [
   {
     id: 1,
     keyName: "planify",
-    tags: ["HTML/CSS", "Node.js", "Mysql"],
+    tags: ["HTML/CSS", "Node.js", "Mysql", "Git"],
     link: "https://github.com/jramaritokifalisoa/L2_P.git",
   },
   {
     id: 2,
     keyName: "travel",
-    tags: ["React-Native Expo", "Reactjs"],
+    tags: ["React-Native Expo", "Reactjs", "Git"],
     link: "https://github.com/jramaritokifalisoa/Miketrika_projet.git",
   },
   {
     id: 3,
     keyName: "api",
-    tags: ["Nodejs", "PostgreSQL", "Swagger"],
+    tags: ["Nodejs", "PostgreSQL", "Swagger", "Git"],
     link: "https://github.com/jramaritokifalisoa/Apprentissage.git",
   },
 ];
