@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 export const Name = () => {
   const fullName = "RAMARITOKIFALISOA Jocyl Nardo";
 
-  // On transforme la chaîne de caractères en tableau de lettres individuelles
   const letters = Array.from(fullName);
 
   return (
@@ -14,13 +13,11 @@ export const Name = () => {
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            // Chaque lettre attend un tout petit peu plus que la précédente pour apparaître (0.04s d'écart)
             transition={{
               duration: 0.2,
-              delay: index * 0.04,
+              delay: index * 0.05,
               ease: "easeIn",
             }}
-            // Cette classe permet de garder les espaces invisibles intacts entre les mots
             className={letter === " " ? "whitespace-pre" : ""}
           >
             {letter}

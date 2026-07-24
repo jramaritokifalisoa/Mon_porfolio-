@@ -11,7 +11,6 @@ export const HomePages = () => {
     <div className="min-h-screen w-full bg-white">
       <Navigation />
 
-      {/* Le Header s'anime dès le chargement de la page */}
       <motion.section
         id="Header"
         className="pt-16"
