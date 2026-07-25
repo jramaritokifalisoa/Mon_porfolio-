@@ -1,7 +1,7 @@
 import Image from "../../assets/images/moi.jpeg";
 import { Name } from "../ui/name";
 import { Button } from "../ui/buttom";
-import cvPdf from "../../assets/pdf/cv-developpeur.pdf";
+import cvPdf from "../../assets/pdf/cv-Jocyl_Nardo.pdf";
 import { useTranslation } from "react-i18next";
 export const Header = () => {
   const { t } = useTranslation();
