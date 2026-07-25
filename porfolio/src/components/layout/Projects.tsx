@@ -1,23 +1,28 @@
 import Image2 from "../../assets/svg/souris.svg";
 import { Button } from "../ui/buttom";
 import { useTranslation } from "react-i18next";
-
+import Image from "../../assets/jpeg/api.jpeg";
+import ImageVoyage from "../../assets/jpeg/voyage.jpeg";
+import ImagePlanify from "../../assets/jpeg/planify.jpeg";
 const PROJECTS_DATA = [
   {
     id: 1,
     keyName: "planify",
+    images: ImagePlanify,
     tags: ["HTML/CSS", "Node.js", "Mysql", "Git"],
     link: "https://github.com/jramaritokifalisoa/L2_P.git",
   },
   {
     id: 2,
     keyName: "travel",
+    images: ImageVoyage,
     tags: ["React-Native Expo", "Reactjs", "Git"],
     link: "https://github.com/jramaritokifalisoa/Miketrika_projet.git",
   },
   {
     id: 3,
     keyName: "api",
+    images: Image,
     tags: ["Nodejs", "PostgreSQL", "Swagger", "Git"],
     link: "https://github.com/jramaritokifalisoa/Apprentissage.git",
   },
@@ -48,9 +53,11 @@ export const Projects = () => {
               className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm transition-all duration-300"
             >
               <div className="h-48 w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-b border-gray-100 group-hover:from-blue-50/50 group-hover:to-teal-50/50 transition-colors">
-                <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider group-hover:text-blue-500 transition-colors">
-                  {t("projects.projectPreview")}
-                </span>
+                <img
+                  src={project.images}
+                  alt={t(`projects.data.${project.keyName}.title`)}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                />
               </div>
 
               <div className="p-6 flex flex-col flex-grow space-y-3">
