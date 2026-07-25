@@ -12,7 +12,6 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
 
-  // Synchronisation avec l'état i18n en lettres majuscules
   const currentLang =
     LANGUAGES.find((l) => l.code === i18n.language.toUpperCase()) ||
     LANGUAGES[0];
@@ -30,7 +29,7 @@ export const Navigation = () => {
             <Name />
           </div>
           <span className="text-xl text-blue-600 font-bold tracking-wider uppercase hidden sm:block">
-            Full-Stack Developer
+            {t("Navigation.Developer")}
           </span>
         </div>
 
