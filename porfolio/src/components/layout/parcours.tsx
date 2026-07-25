@@ -34,7 +34,7 @@ export const Parcours = () => {
                 </span>
               </div>
               <h3 className="text-xl font-bold text-gray-950 mb-3">
-                {t("parcours.licence.title", "DTS")}
+                {t("parcours.licence.title", "L2")}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 {t(
