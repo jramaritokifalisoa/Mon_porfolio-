@@ -1,7 +1,7 @@
 {
   "Navigation": {
     "Acceuil": "Home",
-    "Developer": "Developer",
+    "Developer": "Developer Full Stack",
     "À propos": "About",
     "Compétences": "Skills",
     "Projets": "Projects"
@@ -9,7 +9,7 @@
   "header": {
     "portraitAlt": "Professional portrait",
     "dispoStage": "Available for an internship",
-    "posteTitle": "Developer — 2026 Internship",
+    "posteTitle": "Developer Full Stack — 2026 Internship",
     "description": "Passionate about creating high-performance web and mobile applications. I am seeking an internship to deepen my skills and contribute to innovative projects.",
     "btnProjets": "Discover my GitHub profile",
     "btnCv": "Download my CV"

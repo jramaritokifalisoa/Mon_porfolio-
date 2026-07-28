@@ -1,7 +1,7 @@
 {
   "Navigation": {
     "Acceuil": "Accueil",
-    "Developer": "Développeur",
+    "Developer": "Développeur Full Stack",
     "À propos": "À propos",
     "Compétences": "Compétences",
     "Projets": "Projets"
@@ -9,7 +9,7 @@
   "header": {
     "portraitAlt": "Portrait professionnel",
     "dispoStage": "Disponible pour un stage",
-    "posteTitle": "Développeur — Stage 2026",
+    "posteTitle": "Développeur Full Stack — Stage 2026",
     "description": "Passionné par la création d'applications web et mobiles performantes. Je suis à la recherche d'un stage pour approfondir mes compétences et contribuer à des projets innovants.",
     "btnProjets": "Découvrir mon profil GitHub",
     "btnCv": "Télécharger mon CV"
